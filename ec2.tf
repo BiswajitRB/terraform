@@ -5,7 +5,7 @@ region= "us-east-1"
 
 resource "aws_key_pair" "deployer" {
   key_name   = "terrafrom-automate"
-  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN/tgpABFkEr1e2LUjy7WqEo5VeRqIxRK/+qSrjA40/8 root@058155f0943d"
+  public_key = "ssh-ed25519 AAAAvfihgoaifhWRG8FCKUTOBNGOIHR7QDSFkEr1e2LUjy7WqEo5VeRqIxRK/+qSrjA40/8 root@058155f0943d"
 
 }
 
