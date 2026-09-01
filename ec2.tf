@@ -1,11 +1,6 @@
- provider "aws" {
-region= "us-east-1"
-}
-
-
 resource "aws_key_pair" "deployer" {
   key_name   = "terrafrom-automate"
-  public_key = "ssh-ed25519 AAAAvfihgoaifhWRG8FCKUTOBNGOIHR7QDSFkEr1e2LUjy7WqEo5VeRqIxRK/+qSrjA40/8 root@058155f0943d"
+  public_key = "ssh-public-key-value"
 
 }
 
@@ -51,3 +46,7 @@ tags = {
 
 }
 
+resource "aws_ec2_instance_state" "my_instance_state" {
+  instance_id = aws_instance.my_instance.id
+  state       = "running"
+}
