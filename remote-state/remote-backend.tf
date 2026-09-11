@@ -7,16 +7,13 @@ resource "aws_s3_bucket" "example" {
   }
 }
 resource "aws_dynamodb_table" "remote-dynamodb-table" {
-  name           = "my-infra-state-table"
+  name = "my-infra-state-table"
   //billing_mode   = "PROVISIONED"     -> this is the default value, and its cost effective.
-  billing_mode   = "PAY_PER_REQUEST"   
-  read_capacity  = 20
-  write_capacity = 20
-  hash_key       = "UserId"
-  range_key      = "GameTitle"
+  billing_mode = "PAY_PER_REQUEST"
+  hash_key     = "LockID"
 
   attribute {
-    name = "UserId"
+    name = "LockID"
     type = "S"
   }
 }
